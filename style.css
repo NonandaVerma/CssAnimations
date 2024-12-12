@@ -1,0 +1,395 @@
+*
+{ 
+margin:0px;
+padding:0px;
+}
+
+/*--------- BAR ANIMATION--------- */
+
+.barMain
+{ 
+width:100%;
+height:100vh;
+background-color: #070721;
+margin:auto;
+display:flex;
+justify-content: center;
+align-items: center;
+gap:40px;
+        
+}
+
+@keyframes zoom{ 
+ 
+    0%{ transform: scale(1);}
+
+    50%{ transform: scale(1.5);}
+
+    100%{ transform: scale(1);}
+    
+}
+
+.b1{ width:10px;
+     height:200px;
+     background-color: orange;
+     animation: zoom 2s 0s infinite linear;
+     
+    }
+
+.b2{ background-color: #ccc;
+     animation: zoom 3s 1s infinite linear; }    
+
+.b3{ background-color: yellow;
+        animation: zoom 2s 1.5s infinite linear; }   
+
+.b4{ background-color: green;
+            animation: zoom 3s 2.5s infinite linear; }        
+
+/* WAVE ANIMATION  */
+
+.enq
+{ width:150px;
+  height:40px;
+  color:#fff;
+  background-color: #A52A2A;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  position: relative;
+  margin:20px auto;
+  border-radius:10px;
+  line-height: 40px;
+
+ }
+
+ @keyframes wave{ 
+
+    0%{ transform: scale(1);
+        background-color: #a52a2ac1;
+        opacity: 0;
+        }
+
+    50%{ transform: scale(1.5);
+        background-color: #a52a2a4f;
+        opacity: 1;
+       }
+
+    100%{ transform:scale(1);
+        background-color: #a52a2ac1;
+        opacity: 0;
+    }
+ }
+
+ .over{ width:150px;
+        height:40px;
+        border-radius:10px;
+        background-color: #a52a2ac1;
+        opacity: 1;
+        position:absolute;
+        top:0px;
+        left:0px;
+        animation:wave 2s 0s infinite linear;
+       }
+
+/* WEBSITE PRELOADER */
+
+.container
+{ width:400px;
+  height:300px;
+  margin:200px auto;
+}
+
+@keyframes greyBoxRot{ 
+
+0% { border-bottom-right-radius: 0px;
+       transform: rotate(0); }
+
+
+25% { transform: translateY(8px) rotate(20deg); }
+
+50% {
+    transform: translateY(15px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 30px;
+}
+
+75% {
+    transform: translateY(10px) rotate(65deg);
+}
+
+100% {
+    transform: translateY(0) rotate(90deg);
+}
+}
+
+.greyBox
+{ width: 120px;
+  height:120px;
+  background-color: grey;
+  margin: auto;
+  margin-top:80px;
+  animation:greyBoxRot 600ms 0s infinite linear;
+}
+
+@keyframes shadow{ 
+    0%{ transform:scaleX(1);}
+
+    50%{ transform:scaleX(1.1);}
+
+    100%{ transform:scaleX(1);}
+}
+
+.shadow{ width:150px;
+         height:15px;
+         background-color: #ccc;
+         border-radius: 50%;
+         margin:auto;
+         margin-top:30px;
+         animation: shadow 0.5s 0s infinite linear;
+        }
+
+/* ------SOLAR SYSTEM-------------- */
+
+.solarSys
+{ width:100%;
+  height:100vh;
+  background-color: #080E24;
+}
+
+.sm{ width:98%;
+     height:98%;
+     margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   position:relative;}
+
+.sun
+{ width:50px;
+  height:50px;
+  background-color: orange;
+  border-radius:50%;
+  box-shadow: 0px 0px 30px  orange;
+  position:fixed;}
+ 
+
+@keyframes revolution {
+
+  0%{ transform: rotate(0deg);}
+
+  100%{ transform: rotate(360deg);}
+  
+}  
+
+
+.ob1{ width: 130px;
+      height:130px;
+      border: solid 3px #394057;
+      border-radius:50%;
+      position:absolute;
+      top: 290px;;
+      left: 685px;
+      animation:revolution 3s 0s infinite linear;
+  }
+
+.mercury, .venus
+{ width:12px;
+          height:12px;
+          background-color: #ccc;
+          border-radius:50%;
+          position:absolute;
+          top:10px;
+          left:15px;
+        }  
+
+.ob2{ width: 200px;
+          height:200px;
+          border: solid 3px #394057;
+          border-radius:50%;
+          position:absolute;
+          top: 255px;;
+          left: 650px;
+          animation:revolution 5s 1s infinite linear;
+      }
+
+.venus{ background-color: rgb(201, 103, 37);
+        top:22px;
+        left:22px;
+      }   
+      
+.ob3{ width: 280px;
+        height:280px;
+        border: solid 3px #394057;
+        border-radius:50%;
+        position:absolute;
+        top: 215px;;
+        left: 610px;
+        animation:revolution 5s 2s infinite linear;
+    }
+
+.earth{ width:12px;
+        height:12px;
+        background-color: rgb(19, 133, 241);
+        border-radius:50%;
+        position:absolute;
+        top:70px;
+        left:8px;
+        animation:rotation 2s 0s infinite linear;
+        }    
+
+@keyframes rotation {
+   0%{ transform: rotate(0deg);}
+
+   100%{ transform:rotate(360deg);}
+}        
+
+.earthRT{ width:6px;
+          height:6px;
+         background-color: #fff;
+         border-radius:50%;
+         position: absolute;
+         top:-15px;
+         left:0px;
+        }  
+        
+.ob4{ width: 365px;
+          height:365px;
+          border: solid 3px #394057;
+          border-radius:50%;
+          position:absolute;
+          top: 175px;;
+          left: 570px;
+          animation:revolution 9s 5s infinite linear;
+      }   
+      
+.mars{ width:15px;
+       height:15px;
+       background-color: red;
+       border-radius: 50%;
+       position:absolute;
+       top:100px;
+      left:8px;}      
+
+.ob5{ width: 440px;
+  height:440px;
+  border: solid 3px #394057;
+  border-radius:50%;
+  position:absolute;
+  top: 140px;;
+  left: 530px;
+  animation:revolution 7s 3.5s infinite linear;
+}    
+
+.jupiter{ width:15px;
+          height:15px;
+          background-color: rgb(255, 198, 84);
+          border-radius:50%;
+          position: absolute;
+         top:100px;
+          left:25px;}
+
+.ob6{ width: 530px;
+            height:530px;
+            border: solid 3px #394057;
+            border-radius:50%;
+            position:absolute;
+            top: 95px;;
+            left: 485px;
+            animation:revolution 12s 2.8s infinite linear;
+        }   
+        
+.saturn{ width:15px;
+         height:15px;
+         background-color: rgb(241, 207, 57);
+         border-radius: 50%;
+         position: absolute;
+         top:120px;
+         left:30px;}   
+         
+.sRing{ width: 12px;
+        height:12px;
+        border-radius: 8px;
+        border: solid 3px #9c4909;
+        left: 3px;
+        background: none;
+        transform: skewY(50deg);
+        left: 3px;
+        top: 3px;
+       }         
+
+ /*---- Bubble animation-----------  */
+
+ .bubbleBody{ width:100%;
+              height:100vh;
+              background:  linear-gradient(to bottom, #2980b9, #3498db);
+              overflow:hidden;
+              position:relative;
+             
+            }
+
+@keyframes bubbleAnim{ 
+  100%{
+        bottom: 700px;
+
+  }
+}            
+
+.bubble, .bubble2, .bubble3, .bubble4
+{ width:200px;
+         height:200px;
+         border-radius:50%;
+         box-shadow: inset 0 0 25px rgba(26, 190, 232, 0.4),
+            inset -5px -10px 35px rgba(255, 255, 255, 0.777); 
+         filter:blur(0.5px);  
+        position:absolute;
+        bottom:-200px;
+        left: 80px;
+        animation:bubbleAnim 5s 0s infinite linear;
+     }  
+        
+.bubbleWhite, .bubbleWhite2, .bubbleWhite3, .bubbleWhite4
+{ width:70px;
+              height:40px;
+              background-color: #ffffffb3;
+              filter: blur(10px);
+              border-radius:50%;
+              margin: 25px 0px 0px 40px;
+              transform: rotate(160deg);
+            }
+
+.bubble2{ width:100px;
+          height:100px;
+          bottom:-200px;
+           left:700px;
+           animation:bubbleAnim 10s 3s infinite linear;}  
+           
+.bubbleWhite2{ width:30px;
+               height:20px;
+               margin: 20px 0px 0px 20px;}   
+               
+.bubble3{ width:70px;
+                height:70px;
+                bottom:-200px;
+                 left:900px;
+                 animation:bubbleAnim 8s 2.5s infinite linear;}  
+                 
+.bubbleWhite3{ width:20px;
+                     height:10px;
+                     margin: 15px 0px 0px 10px;}   
+                     
+                          
+.bubble4{ width:150px;
+           height:150px;
+           bottom:-200px;
+          left:1020px;
+             animation:bubbleAnim 12s 4s infinite linear;}  
+                             
+.bubbleWhite4{ width:50px;
+                height:30px;
+                 margin: 20px 0px 0px 30px;}                        
+
+
+
+
+
+  
